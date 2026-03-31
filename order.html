@@ -392,8 +392,6 @@
 
         pendingFormData = new FormData(form);
         pendingFormData.set('package', packageName);
-        pendingFormData.set('size',    '60ml');
-        pendingFormData.set('bottles', bottles);
         pendingFormData.set('total',   price);
 
         document.getElementById('confirmName').textContent     = pendingFormData.get('name')     || '';
