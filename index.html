@@ -849,6 +849,17 @@
         // Scroll popup to top whenever opened
         box.scrollTop = 0;
     }
+        // Facebook Pixel events
+    fbq('track', 'AddToCart', {
+        content_name: 'Herbal Piles Spray',
+        value: 1900,
+        currency: 'NPR'
+    });
+    fbq('track', 'InitiateCheckout', {
+        content_name: 'Herbal Piles Spray',
+        value: 1900,
+        currency: 'NPR'
+    });
     function closePopup() {
         overlay.classList.remove('open');
         document.body.style.overflow = '';
