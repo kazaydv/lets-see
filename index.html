@@ -1029,7 +1029,8 @@
             loaderLabel.innerHTML = 'अर्डर सफल भयो! 🎉<br/>Order Placed Successfully!';
             loaderSub.textContent = 'धन्यवाद! / Thank you!';
         }, 400);
-        setTimeout(() => { window.location.href = 'thankyou.html'; }, 1200);
+      const orderPrice = pendingData.get('total') || '1900';
+setTimeout(() => { window.location.href = 'thankyou.html?value=' + orderPrice; }, 1200);
     });
 </script>
 
