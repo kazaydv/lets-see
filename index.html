@@ -850,14 +850,16 @@
         box.scrollTop = 0;
 
             // Facebook Pixel events
+   const selectedPkg = document.querySelector('.popup-pkg-option.selected');
+    const checkoutValue = selectedPkg ? parseFloat(selectedPkg.getAttribute('data-price')) : 1900;
     fbq('track', 'AddToCart', {
         content_name: 'Herbal Piles Spray',
-        value: 1900,
+        value: checkoutValue,
         currency: 'NPR'
     });
     fbq('track', 'InitiateCheckout', {
         content_name: 'Herbal Piles Spray',
-        value: 1900,
+        value: checkoutValue,
         currency: 'NPR'
     });
     }
